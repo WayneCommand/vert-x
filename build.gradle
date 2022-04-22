@@ -1,13 +1,10 @@
 plugins {
-    id 'java'
-    id 'application'
     id "com.github.johnrengelman.shadow" version "7.1.2"
+    id 'java'
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
-
-project.setProperty("mainClassName", "org.example.Main")
 
 repositories {
     maven {
@@ -26,12 +23,9 @@ test {
     useJUnitPlatform()
 }
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'org.example.PublicMain'
-    }
-}
-
+// https://ktor.io/docs/fatjar.html#build
 shadowJar {
-    configurations = [project.configurations.compileClasspath]
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
 }

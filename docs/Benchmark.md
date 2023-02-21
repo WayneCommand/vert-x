@@ -180,3 +180,46 @@ Total bytes received: 1623.44 megabytes
 Send bandwidth:       69.33 megabits / second
 Receive bandwidth:    216.27 megabits / second
 ```
+
+### lite
+
+```log
+shenlan@SHENLANMBP ~ % apib -c 100 -d 60 http://localhost:8080/hello
+(5 / 60) 110538.235
+(10 / 60) 160751.595
+(15 / 60) 184160.550
+(20 / 60) 207036.979
+(25 / 60) 209805.139
+(30 / 60) 214482.557
+(35 / 60) 200709.462
+(40 / 60) 210095.884
+(45 / 60) 206284.362
+(50 / 60) 199418.453
+(55 / 60) 204468.321
+(60 / 60) 207461.416
+Duration:             60.042 seconds
+Attempted requests:   11584295
+Successful requests:  11584295
+Non-200 results:      0
+Connections opened:   12
+Socket errors:        0
+
+Throughput:           192937.826 requests/second
+Average latency:      0.518 milliseconds
+Minimum latency:      0.011 milliseconds
+Maximum latency:      8170.331 milliseconds
+Latency std. dev:     14.662 milliseconds
+50% latency:          0.074 milliseconds
+90% latency:          0.339 milliseconds
+98% latency:          0.885 milliseconds
+99% latency:          1.380 milliseconds
+
+Client CPU average:   0%
+Client CPU max:       0%
+Client memory usage:  0%
+
+Total bytes sent:     696.00 megabytes
+Total bytes received: 1215.24 megabytes
+Send bandwidth:       92.74 megabits / second
+Receive bandwidth:    161.92 megabits / second
+```
